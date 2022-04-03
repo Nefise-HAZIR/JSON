@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>json öğreniyoruz</h1>
+    <div id="friend">
+
+    </div>
+    <script type="text/javascript">
+
+        var person =
+        {
+            "firstname": "nefise",
+            "lastname": "hazır",
+            "age":20
+        }
+        console.log(person);
+
+        var directory = {
+            "person1": {
+
+                "firstname": "ömer",
+                "lastname": "hazır",
+                "age":15
+            },
+             "person2": {
+
+                "firstname": "duygu",
+                "lastname": "cort",
+                "age": 40
+            }
+
+
+        }
+        console.log(directory);
+
+        var array = {
+            "firstname": "nefise",
+            "lastname": "hazır",
+            "age": 20,
+            "hobbies": [
+                "reading book",
+                "cooking",
+                "drawing"
+            ],
+            "cars": [
+                {
+                    "mark": "toyota",
+                    "year":"2020"
+                },
+                {
+                    "mark": "mercedes",
+                    "year":"2021"
+                }
+
+            ]
+
+        }
+        console.log(array);
+
+        var myobj = {
+            friends: [
+                {
+                    "firstname": "duygu",
+                    "lastname": "akdoğan"
+                },
+                {
+                    "firstname": "elif",
+                    "lastname": "tekin"
+                },
+                {
+                    "firstname": "beyza",
+                    "lastname": "doğru"
+                },
+                {
+                    "firstname": "buse",
+                    "lastname": "pekşen"
+                }
+            ]
+        }
+
+        var users = myobj.friends;
+        var html = '';
+
+        for (var x in users) {
+
+            html += (Number(x)+ 1) + ' . ' + users[x].firstname + ' ' + users[x].lastname + '<br>';
+
+
+        }
+
+        document.getElementById('friend').innerHTML = html;
+
+
+    </script>
+</body>
+</html>
